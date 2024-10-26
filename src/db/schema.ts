@@ -1,6 +1,7 @@
-import { SQL, sql } from "drizzle-orm";
-import { pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
-import { SQLJsTransaction } from "drizzle-orm/sql-js";
+import { sql } from "drizzle-orm";
+import { integer, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
+
+
 
 
 export const USERS = pgTable('USERS', {
@@ -16,3 +17,14 @@ export const USERS = pgTable('USERS', {
    creatat: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
 
 });
+
+export const products = pgTable('products',{
+   id: serial('id').primaryKey(),
+   name: varchar('name',{length:100}).notNull(),
+   image: text('image'),
+   description: text('description'),
+   price: integer('price').notNull(),
+   updateAt: timestamp('updated_at').default(sql`CURRENT_TIMESTAMP`),
+   creatat: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`),
+
+})

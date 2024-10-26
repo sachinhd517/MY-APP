@@ -8,6 +8,13 @@
       "when": 1729883172916,
       "tag": "0000_useful_beast",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1729926045875,
+      "tag": "0001_burly_thunderbolt_ross",
+      "breakpoints": true
     }
   ]
 }
